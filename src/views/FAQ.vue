@@ -99,7 +99,12 @@ const faqs = ref([
       "We offer a range of software services including custom software development, web development, blockchain, data science, mobile app development, quality assurance and testingL",
     show: false,
   },
-  // Add more FAQs as needed
+  {
+    question: "How do you ensure the quality of your work?",
+    answer:
+      "We have a rigorous quality assurance process in place that includes testing at various stages of development, continuous improvement, and feedback from clients.",
+    show: false,
+  },
 ]);
 
 const toggleAnswer = async (index) => {
