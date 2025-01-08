@@ -72,5 +72,6 @@ const navitems = [
   { name: "Services", id: "/services" },
   { name: "About", id: "/about" },
   { name: "Pricing", id: "/pricing" },
+  { name: "Contact", id: "/contact" },
 ];
 </script>

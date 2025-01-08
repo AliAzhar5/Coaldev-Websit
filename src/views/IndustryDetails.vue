@@ -130,7 +130,7 @@
                 </svg>
               </button>
               <a
-                href="/contact"
+                :to="{ name: 'Contact' }"
                 class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
               >
                 <svg
