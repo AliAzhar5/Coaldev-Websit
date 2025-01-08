@@ -112,23 +112,6 @@
             <div
               class="mt-6 sm:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-44"
             >
-              <button
-                @click.stop="toggleSolution(index)"
-                class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
-              >
-                View Solution
-                <svg
-                  :class="{ 'rotate-180': openSolutions[index] }"
-                  class="w-4 h-4 transition-transform duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
               <router-link
                 :to="{ name: 'Contact' }"
                 class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
@@ -145,6 +128,23 @@
                 </svg>
                 Contact Us for This Solution
               </router-link>
+              <button
+                @click.stop="toggleSolution(index)"
+                class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
+              >
+                <svg
+                  :class="{ 'rotate-180': openSolutions[index] }"
+                  class="w-4 h-4 transition-transform duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M19 9l-7 7-7-7" />
+                </svg>
+                View Solution
+              </button>
             </div>
             <div
               v-if="openSolutions[index]"
@@ -154,7 +154,71 @@
                 'opacity-0': !openSolutions[index],
               }"
             >
-              {{ selectedSubcategory.solutions[index] }}
+              ### Dummy Data: Industry and Subcategory Solutions **Industry:**
+              Manufacturing **Subcategories:** 1. **Supply Chain Management:**
+              Modern supply chains are increasingly complex, requiring
+              sophisticated solutions to optimize efficiency, reduce costs, and
+              improve delivery timelines. At CoalDev, we offer cutting-edge
+              software for real-time inventory tracking, supplier collaboration,
+              and predictive analytics. Our tools help manufacturers maintain a
+              lean inventory, reduce stockouts, and improve decision-making. -
+              **Problems Addressed:** 1. Lack of visibility across the supply
+              chain. 2. High costs due to overstocking and inefficient
+              logistics. 3. Delayed communication between suppliers and
+              manufacturers. - **Solutions Provided:** 1. Real-time dashboards
+              with key supply chain metrics. 2. AI-powered demand forecasting
+              and order automation. 3. Integration with IoT devices for tracking
+              shipments and inventory. 2. **Process Automation:** Automating
+              repetitive and time-consuming processes can save time, reduce
+              human error, and improve productivity. Our solutions include
+              robotics process automation (RPA), automated workflows, and
+              intelligent document processing. With these tools, manufacturers
+              can focus on innovation while routine tasks are handled
+              seamlessly. - **Problems Addressed:** 1. Manual handling of
+              production schedules and reports. 2. Inefficient resource
+              allocation leading to downtime. 3. Difficulty in scaling
+              operations without increasing headcount. - **Solutions Provided:**
+              1. RPA for automating repetitive tasks like data entry. 2.
+              Workflow management tools for better task allocation. 3.
+              Predictive maintenance software to minimize unplanned downtime. 3.
+              **Product Lifecycle Management (PLM):** Managing the entire
+              lifecycle of a product, from concept to retirement, requires
+              robust tools. CoalDev provides PLM solutions that streamline
+              design, testing, and market deployment. These tools enable
+              collaboration among design teams, track regulatory compliance, and
+              accelerate time-to-market. - **Problems Addressed:** 1.
+              Disconnected processes between R&D and production teams. 2.
+              Difficulty in tracking product revisions and updates. 3. High
+              costs due to inefficiencies in product testing. - **Solutions
+              Provided:** 1. Centralized platforms for collaboration across
+              teams. 2. Digital twin technology for virtual testing and
+              prototyping. 3. Regulatory tracking systems for compliance
+              reporting. 4. **Quality Management:** Ensuring consistent product
+              quality is vital for maintaining customer trust. Our quality
+              management software includes tools for monitoring production
+              metrics, managing audits, and automating defect tracking. With
+              data-driven insights, manufacturers can continuously improve their
+              processes. - **Problems Addressed:** 1. Inconsistent product
+              quality due to lack of standardization. 2. Time-consuming manual
+              audits and inspections. 3. Difficulty in identifying and
+              addressing defects promptly. - **Solutions Provided:** 1.
+              Automated quality checks using machine learning algorithms. 2.
+              Audit management software for streamlined inspections. 3. Root
+              cause analysis tools for identifying defect sources. 5.
+              **Sustainability and Energy Management:** Sustainability is no
+              longer optional; it's a necessity for modern manufacturers. Our
+              solutions help monitor energy usage, reduce waste, and ensure
+              compliance with environmental regulations. With actionable
+              insights, businesses can achieve their sustainability goals while
+              saving costs. - **Problems Addressed:** 1. High energy costs due
+              to inefficient systems. 2. Difficulty in meeting stringent
+              environmental regulations. 3. Lack of transparency in waste
+              management. - **Solutions Provided:** 1. Energy monitoring tools
+              integrated with smart meters. 2. Reporting software for regulatory
+              compliance. 3. Waste tracking systems to reduce material loss.
+              With our comprehensive solutions, CoalDev ensures that
+              manufacturing companies are equipped to tackle modern challenges
+              and maintain a competitive edge in their industries.
             </div>
           </div>
         </div>

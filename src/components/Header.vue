@@ -46,11 +46,11 @@
           </div>
           <RouterLink
             to="/contact"
-            class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gray-700 hover:bg-[#008C96] active:bg-[#008C96] text-white text-sm sm:text-base md:text-lg rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
+            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-gray-700 hover:bg-[#008C96] active:bg-[#008C96] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
             @click="isMenuOpen = false"
           >
             <ArrowRightIcon
-              class="h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300"
+              class="h-3 sm:h-4 md:h-5 w-3 sm:w-4 md:w-5 group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300"
             />
             Contact Us
           </RouterLink>
@@ -72,6 +72,5 @@ const navitems = [
   { name: "Services", id: "/services" },
   { name: "About", id: "/about" },
   { name: "Pricing", id: "/pricing" },
-  { name: "Contact", id: "/contact" },
 ];
 </script>
