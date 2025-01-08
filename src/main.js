@@ -9,6 +9,7 @@ import About from "./views/About.vue";
 import Header from "./components/Header.vue";
 import IndustryDetails from "./views/IndustryDetails.vue";
 import Contact from "./views/contact.vue";
+import FAQ from "./views/FAQ.vue";
 // import ChatButton from "./components/ChatButton.vue";
 
 const routes = [
@@ -19,6 +20,7 @@ const routes = [
   { path: "/industry/:name", component: IndustryDetails },
   { path: "/about", component: About },
   { path: "/contact", name: "Contact", component: Contact },
+  { path: "/faq", name: "FAQ", component: FAQ },
 ];
 
 const router = createRouter({
