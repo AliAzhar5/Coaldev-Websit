@@ -35,13 +35,13 @@
     <!-- New section for original content -->
     <div class="container mx-auto px-4 sm:px-10 py-12">
       <h2
-        class="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-4 mx-4 sm:ml-5 mt-10"
+        class="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-4 mx-4 sm:ml-24 mt-10"
       >
         OUR EXPERTISE EXTENDS ACROSS
         <span class="text-[#008C96]">INDUSTRIES</span>
       </h2>
       <p
-        class="text-base sm:text-lg lg:text-xl mx-4 sm:ml-5 mt-5 max-w-[750px] leading-normal text-gray-700"
+        class="text-base sm:text-lg lg:text-xl mx-4 sm:ml-24 mt-5 max-w-[750px] leading-normal text-gray-700"
       >
         Our IT solutions company has extensive experience across a wide range of
         industries. No matter your niche, partnering with us ensures you receive
