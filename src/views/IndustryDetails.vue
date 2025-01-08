@@ -24,7 +24,7 @@
           {{ industryTitle }}
         </h1>
         <p
-          class="text-sm sm:text-base lg:text-lg mx-4 mt-5 sm:ml-24 max-w-[750px] leading-normal text-justify"
+          class="text-sm sm:text-base lg:text-lg mx-4 mt-5 sm:ml-24 max-w-[750px] leading-normal content-justify"
         >
           At CoalDev, we provide innovative software solutions tailored to meet
           the diverse needs of various industries. Our expertise spans multiple
@@ -129,7 +129,7 @@
                   <path d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <a
+              <router-link
                 :to="{ name: 'Contact' }"
                 class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
               >
@@ -144,7 +144,7 @@
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
                 Contact Us for This Solution
-              </a>
+              </router-link>
             </div>
             <div
               v-if="openSolutions[index]"

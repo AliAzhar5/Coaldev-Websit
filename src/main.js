@@ -18,7 +18,7 @@ const routes = [
   { path: "/industries", component: Industries },
   { path: "/industry/:name", component: IndustryDetails },
   { path: "/about", component: About },
-  { path: "/contact", component: Contact },
+  { path: "/contact", name: "Contact", component: Contact },
 ];
 
 const router = createRouter({
