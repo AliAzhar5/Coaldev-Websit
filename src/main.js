@@ -10,7 +10,7 @@ import Header from "./components/Header.vue";
 import IndustryDetails from "./views/IndustryDetails.vue";
 import Contact from "./views/contact.vue";
 import FAQ from "./views/FAQ.vue";
-// import ChatButton from "./components/ChatButton.vue";
+import ChatButton from "./components/ChatButton.vue";
 
 const routes = [
   { path: "/", redirect: "/home" },
@@ -33,4 +33,5 @@ const router = createRouter({
 
 const app = createApp(App);
 app.component("Header", Header);
+app.component("ChatButton", ChatButton);
 app.use(router).mount("#app");

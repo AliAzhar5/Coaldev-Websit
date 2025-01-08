@@ -2,7 +2,7 @@
   <div>
     <Header />
     <RouterView />
-    <!-- <ChatButton /> -->
+    <ChatButton />
     <Footer />
   </div>
 </template>
@@ -11,5 +11,5 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import { RouterView } from "vue-router";
-// import ChatButton from "@/components/ChatButton.vue";
+import ChatButton from "@/components/ChatButton.vue";
 </script>

@@ -151,8 +151,5 @@
 
 <script setup>
 import { RouterLink } from "vue-router";
-import {
-  ArrowRightIcon,
-  ChatBubbleLeftRightIcon,
-} from "@heroicons/vue/24/solid";
+import { ArrowRightIcon } from "@heroicons/vue/24/solid";
 </script>
