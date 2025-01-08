@@ -1,0 +1,450 @@
+<template>
+  <div class="overflow-x-hidden">
+    <div class="relative mt-[64px] pb-16">
+      <div class="relative z-10">
+        <div
+          class="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 sm:pt-32 lg:pt-40"
+        >
+          <div class="w-full">
+            <p
+              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4"
+            >
+              LET'S COLLABORATE
+            </p>
+            <p
+              class="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-4"
+            >
+              Have a project in mind?
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-gray-700 mb-4">
+              Tell us everything about your project or product, we'll be glad to
+              help.
+            </p>
+            <!-- Contact information with icons -->
+            <div class="flex flex-col gap-4 mt-8">
+              <div class="flex items-center gap-3">
+                <i class="fas fa-phone text-gray-800 text-xl"></i>
+                <a
+                  href="tel:+923486665515"
+                  class="text-base sm:text-lg lg:text-xl text-gray-700 hover:text-gray-900"
+                >
+                  +92 348 6665515
+                </a>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fas fa-envelope text-gray-800 text-xl"></i>
+                <a
+                  href="mailto:aalliiazhar@gmail.com"
+                  class="text-base sm:text-lg lg:text-xl text-gray-700 hover:text-gray-900"
+                >
+                  aalliiazhar@gmail.com.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Form Section -->
+      <div
+        class="container mx-auto px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16 lg:mt-20"
+      >
+        <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
+          PROJECT DETAILS
+        </h3>
+        <form
+          @submit.prevent="handleSubmit"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 bg-white shadow-lg rounded-xl p-4 sm:p-6 lg:p-8 border-2 border-gray-200"
+        >
+          <!-- Left Column -->
+
+          <div class="space-y-6">
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2"
+                >Name <span class="text-red-500">*</span></label
+              >
+              <input
+                v-model="formData.name"
+                type="text"
+                required
+                @input="validateField('name')"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                :class="{ 'border-red-500': validationErrors.name }"
+              />
+              <p v-if="validationErrors.name" class="text-red-500 text-sm mt-1">
+                {{ validationErrors.name }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2"
+                >Email <span class="text-red-500">*</span></label
+              >
+              <input
+                v-model="formData.email"
+                type="email"
+                required
+                @input="validateField('email')"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                :class="{ 'border-red-500': validationErrors.email }"
+              />
+              <p
+                v-if="validationErrors.email"
+                class="text-red-500 text-sm mt-1"
+              >
+                {{ validationErrors.email }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2"
+                >Phone Number <span class="text-red-500">*</span></label
+              >
+              <input
+                v-model="formData.phone"
+                type="tel"
+                required
+                @input="validateField('phone')"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                :class="{ 'border-red-500': validationErrors.phone }"
+              />
+              <p
+                v-if="validationErrors.phone"
+                class="text-red-500 text-sm mt-1"
+              >
+                {{ validationErrors.phone }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Industry
+              </label>
+              <select
+                v-model="formData.industry"
+                @change="validateField('industry')"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                :class="{ 'border-red-500': validationErrors.industry }"
+              >
+                <option value=""></option>
+                <option
+                  v-for="industry in store.industries"
+                  :key="industry.name"
+                  :value="industry.name"
+                >
+                  {{ industry.name }}
+                </option>
+              </select>
+              <p
+                v-if="validationErrors.industry"
+                class="text-red-500 text-sm mt-1"
+              >
+                {{ validationErrors.industry }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                SubCategory
+              </label>
+              <select
+                v-model="formData.category"
+                @change="validateField('category')"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                :class="{ 'border-red-500': validationErrors.category }"
+              >
+                <option value=""></option>
+                <option
+                  v-for="subcategory in selectedIndustrySubcategories"
+                  :key="subcategory.name"
+                  :value="subcategory.name"
+                >
+                  {{ subcategory.name }}
+                </option>
+              </select>
+              <p
+                v-if="validationErrors.category"
+                class="text-red-500 text-sm mt-1"
+              >
+                {{ validationErrors.category }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2"
+                >Project Name <span class="text-red-500">*</span></label
+              >
+              <input
+                v-model="formData.projectName"
+                type="text"
+                required
+                @input="validateField('projectName')"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                :class="{ 'border-red-500': validationErrors.projectName }"
+              />
+              <p
+                v-if="validationErrors.projectName"
+                class="text-red-500 text-sm mt-1"
+              >
+                {{ validationErrors.projectName }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Tell us more about your project
+              </label>
+              <textarea
+                v-model="formData.comments"
+                rows="4"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500 resize-none"
+                placeholder="Share any additional details about your project..."
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2"
+              >Budget Range <span class="text-red-500">*</span></label
+            >
+            <div class="flex flex-wrap gap-2 sm:gap-3">
+              <div
+                @click="selectedBudget = '0-10k'"
+                :class="[
+                  'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
+                  selectedBudget === '0-10k'
+                    ? 'bg-gray-800 text-white border-gray-800'
+                    : 'border-gray-300 hover:border-gray-400',
+                ]"
+              >
+                $0 - $10k
+              </div>
+              <div
+                @click="selectedBudget = '10k-25k'"
+                :class="[
+                  'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
+                  selectedBudget === '10k-25k'
+                    ? 'bg-gray-800 text-white border-gray-800'
+                    : 'border-gray-300 hover:border-gray-400',
+                ]"
+              >
+                $10k - $25k
+              </div>
+              <div
+                @click="selectedBudget = '25k-plus'"
+                :class="[
+                  'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
+                  selectedBudget === '25k-plus'
+                    ? 'bg-gray-800 text-white border-gray-800'
+                    : 'border-gray-300 hover:border-gray-400',
+                ]"
+              >
+                $25k+
+              </div>
+            </div>
+            <p v-if="validationErrors.budget" class="text-red-500 text-sm mt-1">
+              {{ validationErrors.budget }}
+            </p>
+
+            <!-- Services Section -->
+            <div class="mt-4 sm:mt-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                What services do you need?
+              </label>
+              <div class="flex flex-wrap gap-2 sm:gap-3">
+                <div
+                  v-for="service in services"
+                  :key="service"
+                  @click="
+                    selectedServices.includes(service)
+                      ? (selectedServices = selectedServices.filter(
+                          (s) => s !== service
+                        ))
+                      : selectedServices.push(service)
+                  "
+                  :class="[
+                    'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
+                    selectedServices.includes(service)
+                      ? 'bg-gray-800 text-white border-gray-800'
+                      : 'border-gray-300 hover:border-gray-400',
+                  ]"
+                >
+                  {{ service }}
+                </div>
+              </div>
+              <p
+                v-if="validationErrors.services"
+                class="text-red-500 text-sm mt-1"
+              >
+                {{ validationErrors.services }}
+              </p>
+            </div>
+
+            <!-- Technologies Section -->
+            <div class="mt-4 sm:mt-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2">
+                Are There Any Technologies You Want To Specify?
+              </label>
+              <div class="flex flex-wrap gap-2 sm:gap-3">
+                <div
+                  v-for="tech in technologies"
+                  :key="tech"
+                  @click="
+                    selectedTechnologies.includes(tech)
+                      ? (selectedTechnologies = selectedTechnologies.filter(
+                          (t) => t !== tech
+                        ))
+                      : selectedTechnologies.push(tech)
+                  "
+                  :class="[
+                    'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
+                    selectedTechnologies.includes(tech)
+                      ? 'bg-gray-800 text-white border-gray-800'
+                      : 'border-gray-300 hover:border-gray-400',
+                  ]"
+                >
+                  {{ tech }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div
+            class="mt-6 sm:mt-8 flex justify-center col-span-1 lg:col-span-2"
+          >
+            <button
+              class="w-full sm:w-auto bg-gray-800 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#008C96] transition-colors"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, computed } from "vue";
+import { validateContactForm } from "@/utils/formValidation";
+import { store } from "@/components/Store";
+
+const selectedBudget = ref(null);
+const selectedServices = ref([]);
+const selectedTechnologies = ref([]);
+
+const formData = ref({
+  name: "",
+  email: "",
+  phone: "",
+  industry: "",
+  category: "",
+  projectName: "",
+  comments: "",
+});
+
+const services = [
+  "Web Development",
+  "Mobile Development",
+  "UI/UX Design",
+  "Cloud Services",
+  "Quality Assurance",
+  "Project Management",
+  "Artificial Intelligence",
+  "Generative AI",
+  "Data Science",
+  "Data Analytics",
+];
+
+const technologies = [
+  "Django",
+  "Flask",
+  "React",
+  "React Native",
+  "Vue",
+  "Angular",
+  "Node.js",
+  "Python",
+  "Java",
+  "Tensorflow",
+  "Ruby",
+  "AWS",
+  "Azure",
+  "Google Cloud",
+  "Docker",
+  "Kubernetes",
+  "MongoDB",
+  "PostgreSQL",
+];
+
+// Add new ref for validation errors
+const validationErrors = ref({});
+
+// Add computed property for subcategories
+const selectedIndustrySubcategories = computed(() => {
+  const selectedIndustry = store.industries.find(
+    (industry) => industry.name === formData.value.industry
+  );
+  return selectedIndustry ? selectedIndustry.subcategories : [];
+});
+
+// When industry changes, reset the category
+const handleIndustryChange = () => {
+  formData.value.category = "";
+  validateField("industry");
+};
+
+// Add validation on input change
+const validateField = (field) => {
+  const dataToValidate = {
+    ...formData.value,
+    budget: selectedBudget.value,
+    services: selectedServices.value,
+    technologies: selectedTechnologies.value,
+  };
+
+  const { errors } = validateContactForm(dataToValidate);
+  validationErrors.value[field] = errors[field];
+};
+
+const handleSubmit = async () => {
+  try {
+    const submissionData = {
+      ...formData.value,
+      budget: selectedBudget.value,
+      services: selectedServices.value,
+      technologies: selectedTechnologies.value,
+    };
+
+    const { isValid, errors } = validateContactForm(submissionData);
+    validationErrors.value = errors;
+
+    if (!isValid) {
+      console.log("Validation errors:", errors);
+      return;
+    }
+
+    console.log("Form submitted:", submissionData);
+
+    formData.value = {
+      name: "",
+      email: "",
+      phone: "",
+      industry: "",
+      category: "",
+      projectName: "",
+      comments: "",
+    };
+    selectedBudget.value = null;
+    selectedServices.value = [];
+    selectedTechnologies.value = [];
+
+    alert("Thank you for your submission!");
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("There was an error submitting your form. Please try again.");
+  }
+};
+</script>
