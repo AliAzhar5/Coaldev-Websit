@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full">
+  <main class="w-full overflow-x-hidden">
     <section class="mt-40 w-full ml-4 sm:ml-10">
       <h1
         class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4 mx-4 lg:ml-16"
