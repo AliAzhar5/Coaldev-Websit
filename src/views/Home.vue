@@ -47,7 +47,7 @@
     </section>
 
     <!-- Second Section -->
-    <section class="py-20 w-full">
+    <section class="py-20 w-full bg-[#091924] mt-5 sm:mt-10 md:mt-32">
       <div
         class="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 lg:pt-20 max-w-full"
       >
@@ -58,18 +58,18 @@
             <img
               src="@/assets/computer.png"
               alt="Computer Setup"
-              class="w-full max-w-[100%] h-auto sm:max-w-[50%] md:max-w-[90%]"
+              class="w-full max-w-[100%] h-auto sm:max-w-[50%] md:max-w-[90%] rounded-3xl"
             />
           </div>
           <div class="w-full lg:w-3/5 order-2 lg:order-2 lg:-mt-8 lg:ml-10">
             <h1
-              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4 mx-4 lg:ml-16"
+              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-white mb-4 mx-4 lg:ml-16"
             >
               WE ARE COAL<span class="text-[#008C96] italic">DEV.</span>
             </h1>
             <div class="w-full lg:w-4/5 text-justify">
               <p
-                class="text-base sm:text-lg lg:text-xl text-gray-700 mb-4 mx-4 lg:ml-16 lg:mt-10 text-justify"
+                class="text-base sm:text-lg lg:text-xl text-white mb-4 mx-4 lg:ml-16 lg:mt-10 text-justify"
               >
                 Whether you need a simple application or a complex web-based
                 system, CoalDev can help you achieve your goals. We have a team
