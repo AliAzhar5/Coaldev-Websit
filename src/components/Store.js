@@ -57,7 +57,7 @@ export const store = reactive({
       ],
     },
     {
-      name: "Financial Services and Banking",
+      name: "Financial Services",
       icon: "fas fa-landmark",
       description: `• Billing & Payment Solutions
     • Financial Analytics
@@ -200,7 +200,7 @@ export const store = reactive({
       ],
     },
     {
-      name: "Transportation and Logistics",
+      name: "Transportation",
       icon: "fas fa-truck",
       description: `• Real-Time Fleet Tracking
     • Route Optimization
@@ -337,7 +337,7 @@ export const store = reactive({
       ],
     },
     {
-      name: "Pharmaceuticals and Biotechnology",
+      name: "Pharmaceuticals",
       icon: "fas fa-microscope",
       description: `• Clinical Trial Management
     • Drug Discovery
@@ -443,7 +443,7 @@ export const store = reactive({
       ],
     },
     {
-      name: "Real Estate and Property Management",
+      name: "Real Estate",
       icon: "fas fa-building",
       description: `• Property Management
     • Virtual Tour & Visualization
@@ -539,7 +539,7 @@ export const store = reactive({
       ],
     },
     {
-      name: "Government and Public Sector",
+      name: "Government",
       icon: "fas fa-university",
       description: `• E-Governance
     • Citizen Service Portals

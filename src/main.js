@@ -12,6 +12,13 @@ import Contact from "./views/contact.vue";
 import FAQ from "./views/FAQ.vue";
 import ChatButton from "./components/ChatButton.vue";
 import VueGtag from "vue-gtag";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+
+// Add Font Awesome icons to the library
+library.add(fas, fab);
 
 const routes = [
   { path: "/", redirect: "/home" },
@@ -36,11 +43,12 @@ const app = createApp(App);
 app.use(
   VueGtag,
   {
-    config: { id: "G-06CXWV5M5J" }, // Replace with your actual Google Analytics ID
+    config: { id: "G-06CXWV5M5J" },
   },
   router
 );
 
 app.component("Header", Header);
 app.component("ChatButton", ChatButton);
+app.component("font-awesome-icon", FontAwesomeIcon);
 app.use(router).mount("#app");

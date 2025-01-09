@@ -99,7 +99,7 @@ const services = [
 • Backend Development`,
   },
   {
-    name: "Mobile App Development",
+    name: "Mobile Application Development",
     icon: "fas fa-mobile-alt",
     description: `• Customized Mobile Solutions
 • IOS & Android Development
