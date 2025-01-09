@@ -32,13 +32,13 @@
           class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8"
         >
           <div
-            class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 text-base sm:text-lg md:text-xl font-merriweather text-gray-600 font-medium"
+            class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 font-sans text-base sm:text-lg md:text-lg text-gray-600 font-medium"
           >
             <RouterLink
               v-for="item in navitems"
               :key="item.id"
               :to="item.id"
-              class="hover:text-[#008C96] transition-colors duration-300 cursor-pointer hover:decoration-[#008C96] hover:underline underline-offset-4 decoration-transparent"
+              class="hover:text-[#008C96] transition-colors duration-300 cursor-pointer hover:decoration-[#008C96] hover:font-semibold hover:underline underline-offset-4 decoration-transparent"
               @click="isMenuOpen = false"
             >
               {{ item.name }}
@@ -50,7 +50,7 @@
             @click="isMenuOpen = false"
           >
             <ArrowRightIcon
-              class="h-3 sm:h-4 md:h-5 w-3 sm:w-4 md:w-5 group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300"
+              class="h-3 sm:h-4 md:h-5 w-3 sm:w-4 md:w-5 font-manrope group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300"
             />
             Contact Us
           </RouterLink>

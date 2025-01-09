@@ -7,9 +7,10 @@
         <div class="flex flex-col lg:flex-row lg:items-center">
           <div class="w-full lg:w-2/3 order-2 lg:order-1">
             <h1
-              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-2 mx-4 lg:ml-16"
+              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-2 mx-4 lg:ml-16 md:mt-10"
             >
-              WE ARE <span class="text-[#008C96] italic">CODING</span>
+              WE ARE
+              <span class="text-[#008C96] italic font-manrope">CODING</span>
               <br />
               YOUR WAY TO SUCCESS
             </h1>
@@ -52,12 +53,12 @@
       >
         <div class="flex flex-col lg:flex-row lg:items-center">
           <div
-            class="w-full lg:w-2/5 order-3 lg:order-1 px-4 lg:pl-32 lg:-mt-20"
+            class="w-full lg:w-2/5 order-3 md:order-1 px-4 lg:pl-32 lg:-mt-20"
           >
             <img
               src="@/assets/computer.png"
               alt="Computer Setup"
-              class="w-full max-w-[100%] h-auto sm:max-w-[50%] md:max-w-[70%]"
+              class="w-full max-w-[100%] h-auto sm:max-w-[50%] md:max-w-[90%]"
             />
           </div>
           <div class="w-full lg:w-3/5 order-2 lg:order-2 lg:-mt-8 lg:ml-10">
@@ -76,13 +77,6 @@
                 solutions to meet the specific needs of clients. With a focus on
                 quality and customer satisfaction, CoalDev is the perfect choice
                 for your next web development project.
-              </p>
-              <p
-                class="text-base sm:text-lg lg:text-xl text-gray-700 mx-4 lg:ml-16 text-justify"
-              >
-                Our team of experienced developers and designers work together
-                to create seamless, user-friendly applications that meet your
-                specific needs.
               </p>
             </div>
           </div>
