@@ -37,7 +37,7 @@
               v-for="item in navitems"
               :key="item.id"
               :to="item.id"
-              class="hover:text-[#008C96] transition-colors duration-300 cursor-pointer hover:decoration-[#008C96] hover:font-semibold hover:underline underline-offset-4 decoration-transparent"
+              class="hover:text-[#009C86] transition-colors duration-300 cursor-pointer hover:decoration-[#091924] hover:font-semibold hover:underline underline-offset-4 decoration-transparent"
               @click="isMenuOpen = false"
             >
               {{ item.name }}
@@ -45,7 +45,7 @@
           </div>
           <RouterLink
             to="/contact"
-            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-gray-700 hover:bg-[#008C96] active:bg-[#008C96] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
+            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-gray-700 hover:bg-[#009C86] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
             @click="isMenuOpen = false"
           >
             <ArrowRightIcon

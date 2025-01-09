@@ -26,7 +26,7 @@
             <div class="flex gap-2 sm:gap-4 mx-4 lg:ml-16 mt-6 lg:mt-16">
               <RouterLink
                 to="/industries"
-                class="inline-flex px-6 sm:px-8 py-3 sm:py-4 bg-gray-700 text-white rounded-full hover:bg-[#008C96] transition-colors duration-300 items-center gap-2 sm:gap-3 border-2 text-sm sm:text-base"
+                class="inline-flex px-6 sm:px-8 py-3 sm:py-4 bg-[#091924] text-white rounded-full hover:bg-[#009C86] transition-colors duration-300 items-center gap-2 sm:gap-3 border-2 text-sm sm:text-base"
               >
                 <ArrowRightIcon class="h-4 w-5 sm:h-6 sm:w-6" />
                 Explore Industry Solutions

@@ -315,7 +315,7 @@
             class="mt-6 sm:mt-8 flex justify-center col-span-1 lg:col-span-2"
           >
             <button
-              class="w-full sm:w-auto bg-gray-800 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#008C96] transition-colors"
+              class="w-full sm:w-auto bg-[#091924] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#008C96] transition-colors"
             >
               Send
             </button>
