@@ -11,8 +11,6 @@ import IndustryDetails from "./views/IndustryDetails.vue";
 import Contact from "./views/contact.vue";
 import FAQ from "./views/FAQ.vue";
 import ChatButton from "./components/ChatButton.vue";
-
-// Import vue-gtag for Google Analytics
 import VueGtag from "vue-gtag";
 
 const routes = [
@@ -35,8 +33,6 @@ const router = createRouter({
 });
 
 const app = createApp(App);
-
-// Use vue-gtag for Google Analytics (replace 'G-XXXXXXXXXX' with your Google Analytics Measurement ID)
 app.use(
   VueGtag,
   {
