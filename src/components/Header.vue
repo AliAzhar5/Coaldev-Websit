@@ -19,7 +19,6 @@
         <XMarkIcon v-else class="h-5 sm:h-6 w-5 sm:w-6" />
       </button>
 
-      <!-- Navigation items with responsive layout -->
       <div
         :class="[
           'lg:flex items-center space-y-4 lg:space-y-0 lg:space-x-6 mr-2 sm:mr-4 md:mr-16 lg:mr-20',

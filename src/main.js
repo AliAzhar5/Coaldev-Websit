@@ -12,6 +12,9 @@ import Contact from "./views/contact.vue";
 import FAQ from "./views/FAQ.vue";
 import ChatButton from "./components/ChatButton.vue";
 
+// Import vue-gtag for Google Analytics
+import VueGtag from "vue-gtag";
+
 const routes = [
   { path: "/", redirect: "/home" },
   { path: "/home", component: Home },
@@ -32,6 +35,16 @@ const router = createRouter({
 });
 
 const app = createApp(App);
+
+// Use vue-gtag for Google Analytics (replace 'G-XXXXXXXXXX' with your Google Analytics Measurement ID)
+app.use(
+  VueGtag,
+  {
+    config: { id: "G-06CXWV5M5J" }, // Replace with your actual Google Analytics ID
+  },
+  router
+);
+
 app.component("Header", Header);
 app.component("ChatButton", ChatButton);
 app.use(router).mount("#app");
