@@ -45,7 +45,7 @@
           </div>
           <RouterLink
             to="/contact"
-            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-gray-700 hover:bg-[#009C86] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
+            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-[#091924] hover:bg-[#009C86] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
             @click="isMenuOpen = false"
           >
             <ArrowRightIcon
@@ -60,16 +60,32 @@
 </template>
 
 <script setup>
+import { useGtag } from "vue-gtag";
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { ArrowRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
-import { ref } from "vue";
 
 const isMenuOpen = ref(false);
-
 const navitems = [
   { name: "Industries", id: "/industries" },
   { name: "Services", id: "/services" },
   { name: "About", id: "/about" },
   { name: "FAQ", id: "/faq" },
 ];
+
+// Access the gtag instance
+const gtag = useGtag();
+
+const handleContactClick = () => {
+  // Close the menu
+  isMenuOpen.value = false;
+
+  // Send a custom event to Google Analytics
+  gtag.event("click", {
+    event_category: "Navigation",
+    event_label: "Contact Us Button",
+    value: 1,
+  });
+};
 </script>
+

@@ -47,7 +47,7 @@
     </section>
 
     <!-- Second Section -->
-    <section class="py-20 w-full bg-[#091924] mt-5 sm:mt-10 md:mt-32">
+    <section class="py-20 w-full bg-[#091924] mt-10 sm:mt-16 md:mt-32">
       <div
         class="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 lg:pt-20 max-w-full"
       >

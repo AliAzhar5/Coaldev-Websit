@@ -86,33 +86,6 @@
         </router-link>
       </div>
     </div>
-
-    <div class="container mx-auto px-4 sm:px-10 py-10 sm:py-20">
-      <div
-        class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0"
-      >
-        <div class="w-full lg:w-2/3 mt-0 lg:-mt-32">
-          <p
-            class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4 mx-4"
-          >
-            INDUSTRIES WE <span class="text-[#008C96]">SERVE</span>
-          </p>
-          <p class="text-base sm:text-lg lg:text-xl text-gray-700 mb-4 mx-4">
-            At Coaldev, we provide tailored IT solutions to transform businesses
-            across healthcare, finance, education, retail, and more. From
-            startups to enterprises, Coaldev delivers cutting-edge technology to
-            drive growth and efficiency in every industry we serve.
-          </p>
-        </div>
-        <div class="w-full lg:w-1/3 pl-0 lg:pl-20">
-          <img
-            src="@/assets/industries.jpg"
-            alt="Computer Setup"
-            class="rounded-lg shadow-xl w-full max-w-[100%] h-auto"
-          />
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
