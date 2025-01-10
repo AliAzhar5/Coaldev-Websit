@@ -60,32 +60,16 @@
 </template>
 
 <script setup>
-import { useGtag } from "vue-gtag";
-import { ref } from "vue";
 import { RouterLink } from "vue-router";
 import { ArrowRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
+import { ref } from "vue";
 
 const isMenuOpen = ref(false);
+
 const navitems = [
   { name: "Industries", id: "/industries" },
   { name: "Services", id: "/services" },
   { name: "About", id: "/about" },
   { name: "FAQ", id: "/faq" },
 ];
-
-// Access the gtag instance
-const gtag = useGtag();
-
-const handleContactClick = () => {
-  // Close the menu
-  isMenuOpen.value = false;
-
-  // Send a custom event to Google Analytics
-  gtag.event("click", {
-    event_category: "Navigation",
-    event_label: "Contact Us Button",
-    value: 1,
-  });
-};
 </script>
-
