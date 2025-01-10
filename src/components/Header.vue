@@ -46,7 +46,7 @@
           <RouterLink
             to="/contact"
             class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-[#091924] hover:bg-[#009C86] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
-            @click="isMenuOpen = false"
+            @click="handleContactClick"
           >
             <ArrowRightIcon
               class="h-3 sm:h-4 md:h-5 w-3 sm:w-4 md:w-5 font-manrope group-hover:translate-x-1 group-active:translate-x-1 transition-transform duration-300"
@@ -61,6 +61,7 @@
 
 <script setup>
 import { RouterLink } from "vue-router";
+import { useRoute } from "vue-router";
 import { ArrowRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 import { ref } from "vue";
 
@@ -72,4 +73,13 @@ const navitems = [
   { name: "About", id: "/about" },
   { name: "FAQ", id: "/faq" },
 ];
+
+const handleContactClick = () => {
+  window.$gtag?.event("contact_us_click", {
+    event_category: "Navigation",
+    event_label: "Contact Us Button",
+    value: 1,
+  });
+  isMenuOpen.value = false; // Close the menu if it’s open
+};
 </script>
