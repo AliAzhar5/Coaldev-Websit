@@ -6,7 +6,7 @@
         <img
           src="@/assets/coaldev_logo.png"
           alt="Coaldev Logo"
-          class="h-8 sm:h-10 md:h-12 lg:h-16 w-auto ml-2 sm:ml-4 md:ml-16 lg:ml-28"
+          class="h-10 sm:h-10 md:h-12 w-auto ml-2 sm:ml-4 md:ml-16"
         />
       </RouterLink>
 

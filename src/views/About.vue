@@ -36,9 +36,9 @@
 
     <div class="w-full bg-[#091924]">
       <div
-        class="container mx-auto px-10 sm:px-16 md:px-32 py-10 sm:py-16 lg:py-20"
+        class="container mx-auto px-10 sm:px-16 md:px-32 py-10 sm:py-16 md:py-20"
       >
-        <div class="text-center mt-8 sm:mt-12 md:mt-20 mb-5 sm:mb-10 md:mb-16">
+        <div class="text-center mt-2 sm:mt-8 md:mt-20 mb-3 sm:mb-10 md:mb-16">
           <p class="text-white text-xl sm:text-3xl md:text-5xl font-bold">
             OUR CUSTOMERS STAY
             <span class="text-[#008C96]">100% SATISFIED</span> WITH OUR
