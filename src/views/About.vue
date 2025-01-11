@@ -3,11 +3,11 @@
     <div class="relative h-[130vh] mt-[64px]">
       <div class="relative z-10">
         <div
-          class="container mx-auto px-4 sm:px-6 lg:px-10 pt-20 sm:pt-40 lg:pt-60"
+          class="container mx-auto px-4 sm:px-6 md:px-10 pt-20 sm:pt-40 md:pt-40"
         >
           <div class="w-full">
             <p
-              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4 ml-4 sm:ml-12 lg:ml-24"
+              class="text-2xl sm:text-4xl md:text-6xl font-semibold text-gray-800 mb-4 ml-4 sm:ml-12 md:ml-24"
             >
               ABOUT COAL<span class="text-[#008C96] italic">DEV.</span>
             </p>
@@ -34,11 +34,11 @@
       </div>
     </div>
 
-    <div class="w-full bg-[#091924]">
+    <div class="w-full bg-[#091924] -mt-96 sm:-mt-10 md:-mt-16">
       <div
         class="container mx-auto px-10 sm:px-16 md:px-32 py-10 sm:py-16 md:py-20"
       >
-        <div class="text-center mt-2 sm:mt-8 md:mt-20 mb-3 sm:mb-10 md:mb-16">
+        <div class="text-center mt-4 sm:mt-10 md:mt-20 mb-5 sm:mb-10 md:mb-16">
           <p class="text-white text-xl sm:text-3xl md:text-5xl font-bold">
             OUR CUSTOMERS STAY
             <span class="text-[#008C96]">100% SATISFIED</span> WITH OUR
