@@ -61,7 +61,6 @@
 
 <script setup>
 import { RouterLink } from "vue-router";
-import { useRoute } from "vue-router";
 import { ArrowRightIcon, Bars3Icon, XMarkIcon } from "@heroicons/vue/24/solid";
 import { ref } from "vue";
 
@@ -80,6 +79,6 @@ const handleContactClick = () => {
     event_label: "Contact Us Button",
     value: 1,
   });
-  isMenuOpen.value = false; // Close the menu if it’s open
+  isMenuOpen.value = false;
 };
 </script>
