@@ -44,12 +44,18 @@
             <span class="text-[#008C96]">100% SATISFIED</span> WITH OUR
             CONTRIBUTIONS TO THIER PROJECTS
           </p>
-          <p
-            class="text-white text-base sm:text-lg md:text-xl font-medium mt-3 sm:mt-8 md:mt-12"
+          <div
+            class="flex justify-center gap-4 items-center mt-3 sm:mt-8 md:mt-12"
           >
-            Write to us
-          </p>
-          <div class="mt-3 sm:mt-8 md:mt-12 flex justify-center">
+            <font-awesome-icon
+              :icon="['fas', 'envelope']"
+              class="text-white h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
+            />
+            <p class="text-white text-base sm:text-lg md:text-xl font-medium">
+              Let's Talk
+            </p>
+          </div>
+          <div class="mt-2 sm:mt-4 md:mt-4 flex justify-center">
             <RouterLink
               to="/contact"
               class="px-5 py-1 sm:py-2 md:py-3 bg-[#091924] hover:bg-[#009C86] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group border-2 border-white hover:border-[#009C86] max-w-max"
@@ -67,19 +73,19 @@
 
     <div class="relative min-h-screen">
       <div
-        class="container mx-auto px-4 sm:px-6 lg:px-10 py-10 sm:py-16 lg:py-20"
+        class="container mx-auto px-4 sm:px-6 md:px-10 py-10 sm:py-16 md:py-20"
       >
         <div
-          class="flex flex-col lg:flex-row items-center justify-between flex-wrap"
+          class="flex flex-col md:flex-row items-center justify-between flex-wrap"
         >
-          <div class="w-full lg:w-1/2 mt-0 lg:-mt-16">
+          <div class="w-full md:w-1/2 mt-0 md:mt-16">
             <p
-              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4 ml-4 sm:ml-12 lg:ml-24"
+              class="text-2xl sm:text-4xl md:text-6xl font-semibold text-gray-800 mb-4 ml-4 sm:ml-12 md:ml-24"
             >
               OUR STORY
             </p>
             <p
-              class="text-base sm:text-lg lg:text-xl text-gray-700 border-l-4 border-[#008C96] mb-4 ml-4 sm:ml-12 lg:ml-24 mt-12 sm:mt-16 lg:mt-24 pl-4"
+              class="text-base sm:text-lg lg:text-xl text-gray-700 border-l-4 border-[#008C96] mb-4 ml-4 sm:ml-12 md:ml-24 mt-12 sm:mt-16 md:mt-24 pl-4"
             >
               CoalDev is a customer-centric information technology company and
               offers comprehensive, cost effective and efficient software
@@ -89,9 +95,9 @@
               innovations.
             </p>
           </div>
-          <div class="w-full lg:w-1/2 pl-4 sm:pl-12 lg:pl-32 mt-10 lg:mt-20">
+          <div class="w-full md:w-1/2 pl-4 sm:pl-12 md:pl-32 mt-10 md:mt-20">
             <p
-              class="text-base sm:text-lg lg:text-xl text-black font-bold ml-0 sm:ml-10 max-w-[400px] leading-normal lg:-mt-16"
+              class="text-base sm:text-lg md:text-xl text-black font-bold ml-0 sm:ml-10 max-w-[400px] leading-normal md:mt-16"
             >
               Our mission is to turn our extensive
               <span class="text-[#008C96]">business expertise</span> and
