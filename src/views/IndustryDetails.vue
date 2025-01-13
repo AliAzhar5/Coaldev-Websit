@@ -18,7 +18,7 @@
           <span class="text-[#448CA1]">Subcategories</span>
         </p>
         <h1
-          class="text-2xl sm:text-4xl lg:text-6xl font-semibold mb-4 mx-4 sm:ml-24 mt-5 sm:mt-10"
+          class="text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 mx-4 sm:ml-24 mt-5 sm:mt-10"
         >
           {{ industryTitle }}
         </h1>

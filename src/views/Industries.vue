@@ -22,7 +22,7 @@
           INDUSTRIES
         </h1>
         <p
-          class="text-base sm:text-lg lg:text-xl mx-4 sm:ml-24 mt-5 max-w-[750px] leading-normal text-white"
+          class="text-base sm:text-lg mx-4 sm:ml-24 mt-5 max-w-[750px] leading-normal text-white"
         >
           Empowering industries with innovative software solutions designed to
           streamline operations and enhance efficiency. Partner with us to
@@ -34,7 +34,7 @@
     <!-- New section for original content -->
     <div class="container px-6 sm:px-12 py-12 text-left">
       <h2
-        class="text-3xl sm:text-5xl lg:text-7xl font-semibold mb-4 mt-10 italic"
+        class="text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 mt-10 italic"
       >
         OUR EXPERTISE EXTENDS ACROSS
         <span class="text-[#448CA1]">INDUSTRIES</span>

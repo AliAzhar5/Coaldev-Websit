@@ -7,13 +7,13 @@
         >
           <div class="w-full">
             <p
-              class="text-3xl sm:text-5xl md:text-7xl font-semibold text-[#303539] mb-4 ml-4 sm:ml-12 md:ml-24 italic"
+              class="text-3xl sm:text-4xl md:text-6xl font-semibold text-[#303539] mb-4 ml-4 sm:ml-12 md:ml-24 italic"
             >
               ABOUT COAL<span class="text-[#448CA1] italic">DEV.</span>
             </p>
 
             <p
-              class="text-base sm:text-lg lg:text-xl text-[#303539] ml-4 sm:ml-12 lg:ml-24 mt-5 max-w-[600px] leading-normal"
+              class="text-base sm:text-lg text-[#303539] ml-4 sm:ml-12 lg:ml-24 mt-5 max-w-[600px] leading-normal"
             >
               CoalDev is a leading IT outsourcing company that offers the full
               range of software product development, from ideation and design to

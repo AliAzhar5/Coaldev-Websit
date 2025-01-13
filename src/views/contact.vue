@@ -7,16 +7,14 @@
         >
           <div class="w-full">
             <p
-              class="text-3xl sm:text-5xl lg:text-7xl font-semibold text-[#303539] mb-4 italic"
+              class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#303539] mb-4 italic"
             >
               LET'S COLLABORATE
             </p>
-            <p
-              class="text-base sm:text-lg lg:text-xl font-semibold text-[#303539] mb-4"
-            >
+            <p class="text-base sm:text-lg font-semibold text-[#303539] mb-4">
               Have a project in mind?
             </p>
-            <p class="text-sm sm:text-base lg:text-lg text-[#303539] mb-4">
+            <p class="text-sm sm:text-base text-[#303539] mb-4">
               Tell us everything about your project or product, we'll be glad to
               help.
             </p>
@@ -26,7 +24,7 @@
                 <i class="fas fa-phone text-[#303539] text-xl"></i>
                 <a
                   href="tel:+923486665515"
-                  class="text-base sm:text-lg lg:text-xl text-[#303539] hover:text-[#303539]"
+                  class="text-base sm:text-lg text-[#303539] hover:text-[#303539]"
                 >
                   +92 348 6665515
                 </a>

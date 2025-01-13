@@ -33,7 +33,7 @@
     <div class="pt-16 px-6 md:px-12">
       <div class="mx-4 sm:ml-24">
         <h2
-          class="text-3xl sm:text-5xl lg:text-7xl font-semibold mb-4 sm:mt-10 italic"
+          class="text-3xl sm:text-4xl lg:text-6xl font-semibold mb-4 sm:mt-10 italic"
         >
           SERVICES WE <span class="text-[#448CA1]">PROVIDE</span>
         </h2>
