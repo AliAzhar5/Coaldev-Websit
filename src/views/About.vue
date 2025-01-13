@@ -1,40 +1,51 @@
 <template>
   <div class="overflow-x-hidden">
-    <div class="relative h-[130vh] mt-[64px]">
+    <section class="relative h-[130vh] mt-[64px] mb-4 sm:mb-10 lg:mb-16">
       <div class="relative z-10">
         <div
-          class="container mx-auto px-4 sm:px-6 md:px-10 pt-20 sm:pt-40 md:pt-40"
+          class="container mx-auto px-4 sm:px-6 md:px-10 pt-20 flex flex-col sm:flex-row items-center"
         >
-          <div class="w-full">
-            <p
-              class="text-3xl sm:text-4xl md:text-6xl font-semibold text-[#303539] mb-4 ml-4 sm:ml-12 md:ml-24 italic"
+          <div class="w-full sm:w-1/3 text-center sm:text-left px-10 sm:px-1">
+            <h2
+              class="text-3xl sm:text-4xl lg:text-6xl font-bold italic text-[#303539] mb-4"
             >
-              ABOUT COAL<span class="text-[#448CA1] italic">DEV.</span>
-            </p>
+              OUR JOURNEY TO A LEADING
+              <span class="text-[#448CA1]">SOFTWARE DEVELOPMENT</span> PARTNER
+            </h2>
+          </div>
 
-            <p
-              class="text-base sm:text-lg text-[#303539] ml-4 sm:ml-12 lg:ml-24 mt-5 max-w-[600px] leading-normal"
-            >
-              CoalDev is a leading IT outsourcing company that offers the full
-              range of software product development, from ideation and design to
-              development and further maintenance. Our company is founded by
-              savvy IT experts with roots in Big 4 consulting, so you can rely
-              on our strategic vision and tech experience.
-            </p>
-
-            <RouterLink
-              to="/industries"
-              class="ml-4 sm:ml-12 lg:ml-24 mt-8 inline-flex px-6 sm:px-8 py-3 sm:py-4 bg-[#303539] text-white rounded-full hover:bg-[#448CA1] transition-colors duration-300 items-center gap-2"
-            >
-              <ArrowRightIcon class="h-5 w-5" />
-              Explore Industry Solutions
-            </RouterLink>
+          <!-- Right side for images -->
+          <div
+            class="relative w-full sm:w-2/3 flex flex-col sm:flex-row mt-32 mx-8 mr-48 sm:mr-1"
+          >
+            <!-- First image -->
+            <img
+              src="@/assets/mm.jpg"
+              alt="Project Discussion"
+              class="w-[300px] lg:w-[400px] rounded-lg absolute z-0 mr-12 sm:mr-1 lg:mr:2"
+              style="
+                top: 5%;
+                left: 70%;
+                transform: translate(-50%, -50%) rotate(-10deg);
+              "
+            />
+            <!-- Second image -->
+            <img
+              src="@/assets/cc2.jpg"
+              alt="Team Collaboration"
+              class="w-[300px] lg:md:w-[400px] rounded-lg relative z-10 mt-32 sm:mt-36 lg:mt-28 mr-20 sm:mr-64 lg:mr-44 ml-8 mb-1 sm:mb-20"
+              style="
+                top: calc(50% + 50%);
+                left: calc(25%);
+                transform: translate(-5%, -5%) rotate(10deg);
+              "
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="w-full bg-[#303539] -mt-96 sm:-mt-10 md:-mt-16">
+    <div class="w-full bg-[#303539]">
       <div
         class="container mx-auto px-10 sm:px-16 md:px-32 py-10 sm:py-16 md:py-20"
       >
