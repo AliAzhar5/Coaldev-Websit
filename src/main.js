@@ -44,7 +44,7 @@ const app = createApp(App);
 app.use(
   VueGtag,
   {
-    config: { id: "G-R53JELHZWR" },
+    config: { id: "G-J21S0WHF57" },
     appName: "CoalDev Website",
     debug: true,
     pageTrackerScreenviewEnabled: true,
