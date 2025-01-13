@@ -74,11 +74,16 @@ const navitems = [
 ];
 
 const handleContactClick = () => {
-  window.$gtag?.event("contact_us_click", {
-    event_category: "Navigation",
-    event_label: "Contact Us Button",
-    value: 1,
-  });
+  if (window.gtag) {
+    console.log("Google Analytics is initialized.");
+    window.gtag("event", "contact_us_click", {
+      event_category: "Navigation",
+      event_label: "Contact Us Button",
+      value: 1,
+    });
+  } else {
+    console.warn("Google Analytics is not initialized.");
+  }
   isMenuOpen.value = false;
 };
 </script>
