@@ -2,7 +2,6 @@
   <div>
     <!-- Hero section with background image -->
     <div class="relative h-[600px]">
-      <!-- Background image with overlay -->
       <div class="absolute inset-0">
         <img
           src="@/assets/subcategory.jpg"
@@ -16,7 +15,7 @@
       <div class="relative z-10 pt-32 px-6 md:px-12 text-white">
         <p class="text-2xl text-white mx-4 sm:ml-24 mt-10 sm:mt-20">
           Home > Industries >
-          <span class="text-[#008C96]">Subcategories</span>
+          <span class="text-[#448CA1]">Subcategories</span>
         </p>
         <h1
           class="text-2xl sm:text-4xl lg:text-6xl font-semibold mb-4 mx-4 sm:ml-24 mt-5 sm:mt-10"
@@ -40,7 +39,7 @@
 
     <section class="mt-12 sm:mt-20">
       <h2
-        class="text-xl sm:text-2xl font-semibold text-gray-700 mb-4 mx-4 sm:ml-12 md:ml-24"
+        class="text-xl sm:text-2xl font-semibold text-[#303539] mb-4 mx-4 sm:ml-12 md:ml-24"
       >
         SUBCATEGORIES:
       </h2>
@@ -51,11 +50,11 @@
           v-for="subcategory in subcategories"
           :key="subcategory.name"
           @click="selectedSubcategory = subcategory"
-          class="bg-gray-50 p-4 transition-all duration-500 ease-in-out cursor-pointer group border-l-4 border-gray-900 relative overflow-hidden"
-          :class="{ 'bg-gray-900': selectedSubcategory === subcategory }"
+          class="bg-gray-50 p-4 transition-all duration-500 ease-in-out cursor-pointer group border-l-4 border-[#303539] relative overflow-hidden"
+          :class="{ 'bg-[#303539]': selectedSubcategory === subcategory }"
         >
           <div
-            class="absolute inset-0 bg-gray-900 transform"
+            class="absolute inset-0 bg-[#303539] transform"
             :class="
               selectedSubcategory === subcategory
                 ? 'translate-x-0'
@@ -68,7 +67,7 @@
               :class="
                 selectedSubcategory === subcategory
                   ? 'text-white'
-                  : 'text-gray-900'
+                  : 'text-[#303539]'
               "
             >
               {{ subcategory.name }}
@@ -83,7 +82,7 @@
       class="mx-4 sm:ml-12 md:ml-24 mt-16 sm:mt-20 md:mt-24"
     >
       <h3
-        class="text-2xl sm:text-3xl font-semibold text-gray-800 underline decoration-gray-800 mb-4 sm:mb-6"
+        class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#303539] underline decoration-[#303539] mb-4 sm:mb-6"
       >
         {{ selectedSubcategory.name }}:
       </h3>
@@ -93,19 +92,19 @@
         <div
           v-for="(problem, index) in selectedSubcategory.problems"
           :key="index"
-          class="bg-gray-50 p-8 transition-all duration-500 ease-in-out hover:bg-gray-900 group border-l-4 border-gray-900 relative overflow-hidden"
+          class="bg-gray-50 p-8 transition-all duration-500 ease-in-out hover:bg-[#303539] group border-l-4 border-[#303539] relative overflow-hidden"
         >
           <div
-            class="absolute inset-0 bg-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+            class="absolute inset-0 bg-[#303539] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
           ></div>
           <div class="relative z-10">
             <h4
-              class="text-xl text-gray-900 font-bold mb-4 group-hover:text-white transition-colors duration-300"
+              class="text-xl text-[#303539] font-bold mb-4 group-hover:text-white transition-colors duration-300"
             >
               {{ problem }}
             </h4>
             <p
-              class="text-gray-700 text-base group-hover:text-white transition-colors duration-300 text-justify"
+              class="text-[#303539] text-base group-hover:text-white transition-colors duration-300 text-justify"
             >
               {{ selectedSubcategory.description[index] }}
             </p>
@@ -114,7 +113,7 @@
             >
               <router-link
                 :to="{ name: 'Contact' }"
-                class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
+                class="text-sm font-semibold group-hover:text-white text-[#303539] flex items-center gap-2"
               >
                 <svg
                   class="w-4 h-4"
@@ -130,7 +129,7 @@
               </router-link>
               <button
                 @click.stop="toggleSolution(index)"
-                class="text-sm font-semibold group-hover:text-white text-gray-700 flex items-center gap-2"
+                class="text-sm font-semibold group-hover:text-white text-[#303539] flex items-center gap-2"
               >
                 <svg
                   :class="{ 'rotate-180': openSolutions[index] }"
@@ -148,7 +147,7 @@
             </div>
             <div
               v-if="openSolutions[index]"
-              class="mt-4 text-gray-700 group-hover:text-white transition-all duration-300"
+              class="mt-4 text-[#303539] group-hover:text-white transition-all duration-300"
               :class="{
                 'opacity-100': openSolutions[index],
                 'opacity-0': !openSolutions[index],

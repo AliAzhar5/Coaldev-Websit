@@ -2,9 +2,9 @@
   <main class="w-full overflow-x-hidden">
     <section class="mt-40 w-full ml-4 sm:ml-10">
       <h1
-        class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4 mx-4 lg:ml-16"
+        class="text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#303539] mb-4 mx-4 lg:ml-16 italic"
       >
-        FREQUENTLY ASKED <span class="text-[#008C96] italic">QUESTIONS</span>
+        FREQUENTLY ASKED <span class="text-[#448CA1] italic">QUESTIONS</span>
       </h1>
       <div class="mt-10 mb-20">
         <div
@@ -14,14 +14,14 @@
         >
           <button
             @click="toggleAnswer(index)"
-            class="relative w-full text-left bg-gray-50 text-gray-900 p-6 transition-all duration-500 ease-in-out border-l-4 border-gray-900 cursor-pointer group overflow-hidden"
+            class="relative w-full text-left bg-gray-50 text-[#303539] p-6 transition-all duration-500 ease-in-out border-l-4 border-[#303539] cursor-pointer group overflow-hidden"
           >
             <div
-              class="absolute inset-0 bg-gray-900 -translate-x-full transition-transform duration-500 group-hover:translate-x-0"
+              class="absolute inset-0 bg-[#303539] -translate-x-full transition-transform duration-500 group-hover:translate-x-0"
             ></div>
             <div class="relative z-10">
               <h2
-                class="text-lg font-semibold text-gray-800 transition-colors duration-300 ease-in-out group-hover:text-white"
+                class="text-lg font-semibold text-[#303539] transition-colors duration-300 ease-in-out group-hover:text-white"
               >
                 {{ item.question }}
               </h2>
@@ -36,7 +36,7 @@
             class="overflow-hidden transition-max-height duration-500 ease-in-out"
           >
             <div class="w-3/4 text-justify">
-              <p class="text-gray-700 p-4">
+              <p class="text-[#303539] p-4">
                 {{ item.answer }}
               </p>
             </div>

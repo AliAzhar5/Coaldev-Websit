@@ -7,35 +7,35 @@
         >
           <div class="w-full">
             <p
-              class="text-2xl sm:text-4xl lg:text-6xl font-semibold text-gray-800 mb-4"
+              class="text-3xl sm:text-5xl lg:text-7xl font-semibold text-[#303539] mb-4 italic"
             >
               LET'S COLLABORATE
             </p>
             <p
-              class="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-4"
+              class="text-base sm:text-lg lg:text-xl font-semibold text-[#303539] mb-4"
             >
               Have a project in mind?
             </p>
-            <p class="text-sm sm:text-base lg:text-lg text-gray-700 mb-4">
+            <p class="text-sm sm:text-base lg:text-lg text-[#303539] mb-4">
               Tell us everything about your project or product, we'll be glad to
               help.
             </p>
             <!-- Contact information with icons -->
             <div class="flex flex-col gap-4 mt-8">
               <div class="flex items-center gap-3">
-                <i class="fas fa-phone text-gray-800 text-xl"></i>
+                <i class="fas fa-phone text-[#303539] text-xl"></i>
                 <a
                   href="tel:+923486665515"
-                  class="text-base sm:text-lg lg:text-xl text-gray-700 hover:text-gray-900"
+                  class="text-base sm:text-lg lg:text-xl text-[#303539] hover:text-[#303539]"
                 >
                   +92 348 6665515
                 </a>
               </div>
               <div class="flex items-center gap-3">
-                <i class="fas fa-envelope text-gray-800 text-xl"></i>
+                <i class="fas fa-envelope text-[#303539] text-xl"></i>
                 <a
                   href="mailto:aalliiazhar@gmail.com"
-                  class="text-base sm:text-lg lg:text-xl text-gray-700 hover:text-gray-900"
+                  class="text-base sm:text-lg lg:text-xl text-[#303539] hover:text-[#303539]"
                 >
                   aalliiazhar@gmail.com.com
                 </a>
@@ -49,18 +49,18 @@
       <div
         class="container mx-auto px-4 sm:px-6 lg:px-10 mt-12 sm:mt-16 lg:mt-20"
       >
-        <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
+        <h3 class="text-xl sm:text-2xl font-semibold text-[#303539] mb-4">
           PROJECT DETAILS
         </h3>
         <form
           @submit.prevent="handleSubmit"
-          class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 bg-white shadow-lg rounded-xl p-4 sm:p-6 lg:p-8 border-2 border-gray-200"
+          class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 bg-white shadow-lg rounded-xl p-4 sm:p-6 lg:p-8 border-2 border-[#303539]"
         >
           <!-- Left Column -->
 
           <div class="space-y-6">
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2"
+              <label class="block text-[#303539] text-sm font-bold mb-2"
                 >Name <span class="text-red-500">*</span></label
               >
               <input
@@ -68,7 +68,7 @@
                 type="text"
                 required
                 @input="validateField('name')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
                 :class="{ 'border-red-500': validationErrors.name }"
               />
               <p v-if="validationErrors.name" class="text-red-500 text-sm mt-1">
@@ -77,7 +77,7 @@
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2"
+              <label class="block text-[#303539] text-sm font-bold mb-2"
                 >Email <span class="text-red-500">*</span></label
               >
               <input
@@ -85,7 +85,7 @@
                 type="email"
                 required
                 @input="validateField('email')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
                 :class="{ 'border-red-500': validationErrors.email }"
               />
               <p
@@ -97,7 +97,7 @@
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2"
+              <label class="block text-[#303539] text-sm font-bold mb-2"
                 >Phone Number <span class="text-red-500">*</span></label
               >
               <input
@@ -105,7 +105,7 @@
                 type="tel"
                 required
                 @input="validateField('phone')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
                 :class="{ 'border-red-500': validationErrors.phone }"
               />
               <p
@@ -117,13 +117,13 @@
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+              <label class="block text-[#303539] text-sm font-bold mb-2">
                 Industry
               </label>
               <select
                 v-model="formData.industry"
                 @change="validateField('industry')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
                 :class="{ 'border-red-500': validationErrors.industry }"
               >
                 <option value=""></option>
@@ -144,13 +144,13 @@
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+              <label class="block text-[#303539] text-sm font-bold mb-2">
                 SubCategory
               </label>
               <select
                 v-model="formData.category"
                 @change="validateField('category')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
                 :class="{ 'border-red-500': validationErrors.category }"
               >
                 <option value=""></option>
@@ -171,7 +171,7 @@
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2"
+              <label class="block text-[#303539] text-sm font-bold mb-2"
                 >Project Name <span class="text-red-500">*</span></label
               >
               <input
@@ -179,7 +179,7 @@
                 type="text"
                 required
                 @input="validateField('projectName')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
                 :class="{ 'border-red-500': validationErrors.projectName }"
               />
               <p
@@ -191,13 +191,13 @@
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-bold mb-2">
+              <label class="block text-[#303539] text-sm font-bold mb-2">
                 Tell us more about your project
               </label>
               <textarea
                 v-model="formData.comments"
                 rows="4"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-gray-500 resize-none"
+                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] resize-none"
                 placeholder="Share any additional details about your project..."
               ></textarea>
             </div>
@@ -205,7 +205,7 @@
 
           <!-- Right Column -->
           <div>
-            <label class="block text-gray-700 text-sm font-bold mb-2"
+            <label class="block text-[#303539] text-sm font-bold mb-2"
               >Budget Range <span class="text-red-500">*</span></label
             >
             <div class="flex flex-wrap gap-2 sm:gap-3">
@@ -214,8 +214,8 @@
                 :class="[
                   'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
                   selectedBudget === '0-10k'
-                    ? 'bg-gray-800 text-white border-gray-800'
-                    : 'border-gray-300 hover:border-gray-400',
+                    ? 'bg-[#303539] text-white border-[#303539]'
+                    : 'border-[#303539] hover:border-[#303539]',
                 ]"
               >
                 $0 - $10k
@@ -225,8 +225,8 @@
                 :class="[
                   'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
                   selectedBudget === '10k-25k'
-                    ? 'bg-gray-800 text-white border-gray-800'
-                    : 'border-gray-300 hover:border-gray-400',
+                    ? 'bg-[#303539] text-white border-[#303539]'
+                    : 'border-[#303539] hover:border-[#303539]',
                 ]"
               >
                 $10k - $25k
@@ -236,8 +236,8 @@
                 :class="[
                   'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
                   selectedBudget === '25k-plus'
-                    ? 'bg-gray-800 text-white border-gray-800'
-                    : 'border-gray-300 hover:border-gray-400',
+                    ? 'bg-[#303539] text-white border-[#303539]'
+                    : 'border-[#303539] hover:border-[#303539]',
                 ]"
               >
                 $25k+
@@ -266,8 +266,8 @@
                   :class="[
                     'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
                     selectedServices.includes(service)
-                      ? 'bg-gray-800 text-white border-gray-800'
-                      : 'border-gray-300 hover:border-gray-400',
+                      ? 'bg-[#303539] text-white border-[#303539]'
+                      : 'border-[#303539] hover:border-[#303539]',
                   ]"
                 >
                   {{ service }}
@@ -300,8 +300,8 @@
                   :class="[
                     'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
                     selectedTechnologies.includes(tech)
-                      ? 'bg-gray-800 text-white border-gray-800'
-                      : 'border-gray-300 hover:border-gray-400',
+                      ? 'bg-[#303539] text-white border-[#303539]'
+                      : 'border-[#303539] hover:border-[#303539]',
                   ]"
                 >
                   {{ tech }}
@@ -315,7 +315,7 @@
             class="mt-6 sm:mt-8 flex justify-center col-span-1 lg:col-span-2"
           >
             <button
-              class="w-full sm:w-auto bg-[#091924] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#008C96] transition-colors"
+              class="w-full sm:w-auto bg-[#303539] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#448CA1] transition-colors"
             >
               Send
             </button>

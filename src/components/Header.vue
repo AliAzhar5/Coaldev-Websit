@@ -13,7 +13,7 @@
       <!-- Mobile menu button -->
       <button
         @click="isMenuOpen = !isMenuOpen"
-        class="lg:hidden p-2 text-gray-600"
+        class="lg:hidden p-2 text-[#303539]"
       >
         <Bars3Icon v-if="!isMenuOpen" class="h-5 sm:h-6 w-5 sm:w-6" />
         <XMarkIcon v-else class="h-5 sm:h-6 w-5 sm:w-6" />
@@ -37,7 +37,7 @@
               v-for="item in navitems"
               :key="item.id"
               :to="item.id"
-              class="hover:text-[#009C86] transition-colors duration-300 cursor-pointer hover:decoration-[#091924] hover:font-semibold hover:underline underline-offset-4 decoration-transparent"
+              class="hover:text-[#448CA1] transition-colors duration-300 cursor-pointer hover:font-semibold hover:underline underline-offset-4 decoration-transparent hover:decoration-[#448CA1]"
               @click="isMenuOpen = false"
             >
               {{ item.name }}
@@ -45,7 +45,7 @@
           </div>
           <RouterLink
             to="/contact"
-            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-[#091924] hover:bg-[#009C86] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
+            class="px-3 sm:px-4 md:px-5 py-1 sm:py-2 md:py-3 bg-[#303539] hover:bg-[#448CA1] text-white text-xs sm:text-sm md:text-base rounded-full transition-all duration-300 flex items-center gap-2 justify-center group"
             @click="handleContactClick"
           >
             <ArrowRightIcon

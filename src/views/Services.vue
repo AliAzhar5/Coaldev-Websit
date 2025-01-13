@@ -13,7 +13,7 @@
 
       <div class="relative z-10 pt-32 px-6 md:px-12 text-white">
         <p class="text-2xl text-white mx-4 sm:ml-24 mt-10 sm:mt-20">
-          Home > <span class="text-[#008C96]">Services</span>
+          Home > <span class="text-[#448CA1]">Services</span>
         </p>
         <h1
           class="text-2xl sm:text-4xl lg:text-6xl font-semibold mb-4 mx-4 sm:ml-24 mt-10 sm:mt-20"
@@ -33,12 +33,12 @@
     <div class="pt-16 px-6 md:px-12">
       <div class="mx-4 sm:ml-24">
         <h2
-          class="text-2xl sm:text-4xl lg:text-5xl font-semibold mb-4 sm:mt-10"
+          class="text-3xl sm:text-5xl lg:text-7xl font-semibold mb-4 sm:mt-10 italic"
         >
-          SERVICES WE <span class="text-[#008C96]">PROVIDE</span>
+          SERVICES WE <span class="text-[#448CA1]">PROVIDE</span>
         </h2>
         <p
-          class="text-base sm:text-lg lg:text-xl max-w-[750px] leading-normal text-gray-700"
+          class="text-base sm:text-lg lg:text-xl max-w-[750px] leading-normal text-[#303539]"
         >
           At CoalDev, we provide a wide range of IT services tailored to meet
           your business needs. Our skilled professionals deliver innovative
@@ -56,23 +56,23 @@
         <div
           v-for="service in services"
           :key="service.name"
-          class="bg-gray-50 p-6 shadow-md transition-all duration-500 ease-in-out hover:bg-gray-900 group border-l-4 border-gray-900"
+          class="bg-gray-50 p-6 shadow-md transition-all duration-500 ease-in-out hover:bg-[#303539] group border-l-4 border-[#303539]"
         >
           <div class="flex items-center mb-4">
             <i
               :class="[
                 service.icon,
-                'text-4xl mr-4 text-gray-900 group-hover:text-white transition-colors duration-300',
+                'text-4xl mr-4 text-[#303539] group-hover:text-white transition-colors duration-300',
               ]"
             ></i>
             <h2
-              class="text-xl text-gray-900 font-bold group-hover:text-white transition-colors duration-300"
+              class="text-xl text-[#303539] font-bold group-hover:text-white transition-colors duration-300"
             >
               {{ service.name }}
             </h2>
           </div>
           <p
-            class="text-gray-700 text-lg whitespace-pre-line ml-4 group-hover:text-white transition-colors duration-300"
+            class="text-[#303539] text-lg whitespace-pre-line ml-4 group-hover:text-white transition-colors duration-300"
           >
             {{ service.description }}
           </p>
