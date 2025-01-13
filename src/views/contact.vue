@@ -67,18 +67,21 @@
                   type="text"
                   required
                   @input="validateField('name')"
-                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.name }"
                 />
               </label>
-              <p v-if="validationErrors.name" class="text-red-500 text-sm mt-1">
+              <p
+                v-if="validationErrors.name"
+                class="text-red-500 text-sm font-normal mt-1"
+              >
                 {{ validationErrors.name }}
               </p>
             </div>
 
             <div>
-              <label class="block text-[#303539] text-sm font-bold mb-2"
-                >Email <span class="text-red-500">*</span>
+              <label class="block text-[#303539] text-sm font-bold mb-2">
+                Email <span class="text-red-500">*</span>
                 <input
                   id="email"
                   autocomplete="email"
@@ -86,13 +89,13 @@
                   type="email"
                   required
                   @input="validateField('email')"
-                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.email }"
                 />
               </label>
               <p
                 v-if="validationErrors.email"
-                class="text-red-500 text-sm mt-1"
+                class="text-red-500 text-sm font-normal mt-1"
               >
                 {{ validationErrors.email }}
               </p>
@@ -108,13 +111,13 @@
                   type="tel"
                   required
                   @input="validateField('phone')"
-                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.phone }"
                 />
               </label>
               <p
                 v-if="validationErrors.phone"
-                class="text-red-500 text-sm mt-1"
+                class="text-red-500 text-sm font-normal mt-1"
               >
                 {{ validationErrors.phone }}
               </p>
@@ -128,7 +131,7 @@
                   autocomplete="industry"
                   v-model="formData.industry"
                   @change="validateField('industry')"
-                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.industry }"
                 >
                   <option value=""></option>
@@ -143,7 +146,7 @@
               </label>
               <p
                 v-if="validationErrors.industry"
-                class="text-red-500 text-sm mt-1"
+                class="text-red-500 text-sm font-normal mt-1"
               >
                 {{ validationErrors.industry }}
               </p>
@@ -157,7 +160,7 @@
                   autocomplete="category"
                   v-model="formData.category"
                   @change="validateField('category')"
-                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.category }"
                 >
                   <option value=""></option>
@@ -172,7 +175,7 @@
               </label>
               <p
                 v-if="validationErrors.category"
-                class="text-red-500 text-sm mt-1"
+                class="text-red-500 text-sm font-normal mt-1"
               >
                 {{ validationErrors.category }}
               </p>
@@ -188,13 +191,13 @@
                   type="text"
                   required
                   @input="validateField('projectName')"
-                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.projectName }"
                 />
               </label>
               <p
                 v-if="validationErrors.projectName"
-                class="text-red-500 text-sm mt-1"
+                class="text-red-500 text-sm font-normal mt-1"
               >
                 {{ validationErrors.projectName }}
               </p>
@@ -203,58 +206,59 @@
             <div>
               <label class="block text-[#303539] text-sm font-bold mb-2">
                 Tell us more about your project
+
+                <textarea
+                  id="comments"
+                  autocomplete="comments"
+                  v-model="formData.comments"
+                  rows="4"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] resize-none font-normal"
+                  placeholder="Share any additional details about your project..."
+                ></textarea>
               </label>
-              <textarea
-                id="comments"
-                autocomplete="comments"
-                v-model="formData.comments"
-                rows="4"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] resize-none"
-                placeholder="Share any additional details about your project..."
-              ></textarea>
             </div>
           </div>
 
           <!-- Right Column -->
           <div>
             <label class="block text-[#303539] text-sm font-bold mb-2"
-              >Budget Range <span class="text-red-500">*</span></label
-            >
-            <div class="flex flex-wrap gap-2 sm:gap-3">
-              <div
-                @click="selectedBudget = '0-10k'"
-                :class="[
-                  'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
-                  selectedBudget === '0-10k'
-                    ? 'bg-[#303539] text-white border-[#303539]'
-                    : 'border-[#303539] hover:border-[#303539]',
-                ]"
-              >
-                $0 - $10k
+              >Budget Range <span class="text-red-500">*</span>
+              <div class="flex flex-wrap gap-2 sm:gap-3">
+                <div
+                  @click="selectedBudget = '0-10k'"
+                  :class="[
+                    'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors font-normal',
+                    selectedBudget === '0-10k'
+                      ? 'bg-[#303539] text-white border-[#303539]'
+                      : 'border-[#303539] hover:border-[#303539]',
+                  ]"
+                >
+                  $0 - $10k
+                </div>
+                <div
+                  @click="selectedBudget = '10k-25k'"
+                  :class="[
+                    'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors font-normal',
+                    selectedBudget === '10k-25k'
+                      ? 'bg-[#303539] text-white border-[#303539]'
+                      : 'border-[#303539] hover:border-[#303539]',
+                  ]"
+                >
+                  $10k - $25k
+                </div>
+                <div
+                  @click="selectedBudget = '25k-plus'"
+                  :class="[
+                    'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors font-normal',
+                    selectedBudget === '25k-plus'
+                      ? 'bg-[#303539] text-white border-[#303539]'
+                      : 'border-[#303539] hover:border-[#303539]',
+                  ]"
+                >
+                  $25k+
+                </div>
               </div>
-              <div
-                @click="selectedBudget = '10k-25k'"
-                :class="[
-                  'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
-                  selectedBudget === '10k-25k'
-                    ? 'bg-[#303539] text-white border-[#303539]'
-                    : 'border-[#303539] hover:border-[#303539]',
-                ]"
-              >
-                $10k - $25k
-              </div>
-              <div
-                @click="selectedBudget = '25k-plus'"
-                :class="[
-                  'px-3 sm:px-4 py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
-                  selectedBudget === '25k-plus'
-                    ? 'bg-[#303539] text-white border-[#303539]'
-                    : 'border-[#303539] hover:border-[#303539]',
-                ]"
-              >
-                $25k+
-              </div>
-            </div>
+            </label>
             <p v-if="validationErrors.budget" class="text-red-500 text-sm mt-1">
               {{ validationErrors.budget }}
             </p>
@@ -263,28 +267,29 @@
             <div class="mt-4 sm:mt-6">
               <label class="block text-gray-700 text-sm font-bold mb-2">
                 What services do you need?
-              </label>
-              <div class="flex flex-wrap gap-2 sm:gap-3">
-                <div
-                  v-for="service in services"
-                  :key="service"
-                  @click="
-                    selectedServices.includes(service)
-                      ? (selectedServices = selectedServices.filter(
-                          (s) => s !== service
-                        ))
-                      : selectedServices.push(service)
-                  "
-                  :class="[
-                    'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
-                    selectedServices.includes(service)
-                      ? 'bg-[#303539] text-white border-[#303539]'
-                      : 'border-[#303539] hover:border-[#303539]',
-                  ]"
-                >
-                  {{ service }}
+
+                <div class="flex flex-wrap gap-2 sm:gap-3">
+                  <div
+                    v-for="service in services"
+                    :key="service"
+                    @click="
+                      selectedServices.includes(service)
+                        ? (selectedServices = selectedServices.filter(
+                            (s) => s !== service
+                          ))
+                        : selectedServices.push(service)
+                    "
+                    :class="[
+                      'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors font-normal',
+                      selectedServices.includes(service)
+                        ? 'bg-[#303539] text-white border-[#303539]'
+                        : 'border-[#303539] hover:border-[#303539]',
+                    ]"
+                  >
+                    {{ service }}
+                  </div>
                 </div>
-              </div>
+              </label>
               <p
                 v-if="validationErrors.services"
                 class="text-red-500 text-sm mt-1"
@@ -297,28 +302,29 @@
             <div class="mt-4 sm:mt-6">
               <label class="block text-gray-700 text-sm font-bold mb-2">
                 Are There Any Technologies You Want To Specify?
-              </label>
-              <div class="flex flex-wrap gap-2 sm:gap-3">
-                <div
-                  v-for="tech in technologies"
-                  :key="tech"
-                  @click="
-                    selectedTechnologies.includes(tech)
-                      ? (selectedTechnologies = selectedTechnologies.filter(
-                          (t) => t !== tech
-                        ))
-                      : selectedTechnologies.push(tech)
-                  "
-                  :class="[
-                    'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors',
-                    selectedTechnologies.includes(tech)
-                      ? 'bg-[#303539] text-white border-[#303539]'
-                      : 'border-[#303539] hover:border-[#303539]',
-                  ]"
-                >
-                  {{ tech }}
+
+                <div class="flex flex-wrap gap-2 sm:gap-3">
+                  <div
+                    v-for="tech in technologies"
+                    :key="tech"
+                    @click="
+                      selectedTechnologies.includes(tech)
+                        ? (selectedTechnologies = selectedTechnologies.filter(
+                            (t) => t !== tech
+                          ))
+                        : selectedTechnologies.push(tech)
+                    "
+                    :class="[
+                      'px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base rounded-full border cursor-pointer transition-colors font-normal',
+                      selectedTechnologies.includes(tech)
+                        ? 'bg-[#303539] text-white border-[#303539]'
+                        : 'border-[#303539] hover:border-[#303539]',
+                    ]"
+                  >
+                    {{ tech }}
+                  </div>
                 </div>
-              </div>
+              </label>
             </div>
           </div>
 
@@ -327,7 +333,7 @@
             class="mt-6 sm:mt-8 flex justify-center col-span-1 lg:col-span-2"
           >
             <button
-              class="w-full sm:w-auto bg-[#303539] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#448CA1] transition-colors"
+              class="w-full sm:w-auto bg-[#303539] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#448CA1] transition-colors font-normal"
             >
               Send
             </button>
