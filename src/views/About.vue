@@ -58,13 +58,19 @@
           <div
             class="flex justify-center gap-4 items-center mt-3 sm:mt-8 md:mt-12"
           >
-            <font-awesome-icon
-              :icon="['fas', 'envelope']"
-              class="text-white h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6"
-            />
-            <p class="text-white text-base sm:text-lg md:text-xl font-medium">
-              Let's Talk
-            </p>
+            <RouterLink to="/contact">
+              <font-awesome-icon
+                :icon="['fas', 'envelope']"
+                class="text-white h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 hover:text-[#448CA1] transition-colors duration-300"
+              />
+            </RouterLink>
+            <RouterLink to="/contact">
+              <p
+                class="text-white text-base sm:text-lg md:text-xl font-medium hover:text-[#448CA1] transition-colors duration-300"
+              >
+                Let's Talk
+              </p>
+            </RouterLink>
           </div>
           <div class="mt-2 sm:mt-4 md:mt-4 flex justify-center">
             <RouterLink
