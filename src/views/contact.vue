@@ -59,17 +59,18 @@
           <div class="space-y-6">
             <div>
               <label class="block text-[#303539] text-sm font-bold mb-2"
-                >Name <span class="text-red-500">*</span></label
-              >
-              <input
-                id="name"
-                v-model="formData.name"
-                type="text"
-                required
-                @input="validateField('name')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
-                :class="{ 'border-red-500': validationErrors.name }"
-              />
+                >Name <span class="text-red-500">*</span>
+                <input
+                  id="name"
+                  autocomplete="name"
+                  v-model="formData.name"
+                  type="text"
+                  required
+                  @input="validateField('name')"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  :class="{ 'border-red-500': validationErrors.name }"
+                />
+              </label>
               <p v-if="validationErrors.name" class="text-red-500 text-sm mt-1">
                 {{ validationErrors.name }}
               </p>
@@ -77,17 +78,18 @@
 
             <div>
               <label class="block text-[#303539] text-sm font-bold mb-2"
-                >Email <span class="text-red-500">*</span></label
-              >
-              <input
-                id="email"
-                v-model="formData.email"
-                type="email"
-                required
-                @input="validateField('email')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
-                :class="{ 'border-red-500': validationErrors.email }"
-              />
+                >Email <span class="text-red-500">*</span>
+                <input
+                  id="email"
+                  autocomplete="email"
+                  v-model="formData.email"
+                  type="email"
+                  required
+                  @input="validateField('email')"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  :class="{ 'border-red-500': validationErrors.email }"
+                />
+              </label>
               <p
                 v-if="validationErrors.email"
                 class="text-red-500 text-sm mt-1"
@@ -98,17 +100,18 @@
 
             <div>
               <label class="block text-[#303539] text-sm font-bold mb-2"
-                >Phone Number <span class="text-red-500">*</span></label
-              >
-              <input
-                id="phone"
-                v-model="formData.phone"
-                type="tel"
-                required
-                @input="validateField('phone')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
-                :class="{ 'border-red-500': validationErrors.phone }"
-              />
+                >Phone Number <span class="text-red-500">*</span>
+                <input
+                  id="phone"
+                  autocomplete="tel"
+                  v-model="formData.phone"
+                  type="tel"
+                  required
+                  @input="validateField('phone')"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  :class="{ 'border-red-500': validationErrors.phone }"
+                />
+              </label>
               <p
                 v-if="validationErrors.phone"
                 class="text-red-500 text-sm mt-1"
@@ -118,25 +121,26 @@
             </div>
 
             <div>
-              <label class="block text-[#303539] text-sm font-bold mb-2">
-                Industry
-              </label>
-              <select
-                id="industry"
-                v-model="formData.industry"
-                @change="validateField('industry')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
-                :class="{ 'border-red-500': validationErrors.industry }"
-              >
-                <option value=""></option>
-                <option
-                  v-for="industry in store.industries"
-                  :key="industry.name"
-                  :value="industry.name"
+              <label class="block text-[#303539] text-sm font-bold mb-2"
+                >Industry <span class="text-red-500">*</span>
+                <select
+                  id="industry"
+                  autocomplete="industry"
+                  v-model="formData.industry"
+                  @change="validateField('industry')"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  :class="{ 'border-red-500': validationErrors.industry }"
                 >
-                  {{ industry.name }}
-                </option>
-              </select>
+                  <option value=""></option>
+                  <option
+                    v-for="industry in store.industries"
+                    :key="industry.name"
+                    :value="industry.name"
+                  >
+                    {{ industry.name }}
+                  </option>
+                </select>
+              </label>
               <p
                 v-if="validationErrors.industry"
                 class="text-red-500 text-sm mt-1"
@@ -146,25 +150,26 @@
             </div>
 
             <div>
-              <label class="block text-[#303539] text-sm font-bold mb-2">
-                SubCategory
-              </label>
-              <select
-                id="category"
-                v-model="formData.category"
-                @change="validateField('category')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
-                :class="{ 'border-red-500': validationErrors.category }"
-              >
-                <option value=""></option>
-                <option
-                  v-for="subcategory in selectedIndustrySubcategories"
-                  :key="subcategory.name"
-                  :value="subcategory.name"
+              <label class="block text-[#303539] text-sm font-bold mb-2"
+                >SubCategory <span class="text-red-500">*</span>
+                <select
+                  id="category"
+                  autocomplete="category"
+                  v-model="formData.category"
+                  @change="validateField('category')"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  :class="{ 'border-red-500': validationErrors.category }"
                 >
-                  {{ subcategory.name }}
-                </option>
-              </select>
+                  <option value=""></option>
+                  <option
+                    v-for="subcategory in selectedIndustrySubcategories"
+                    :key="subcategory.name"
+                    :value="subcategory.name"
+                  >
+                    {{ subcategory.name }}
+                  </option>
+                </select>
+              </label>
               <p
                 v-if="validationErrors.category"
                 class="text-red-500 text-sm mt-1"
@@ -175,17 +180,18 @@
 
             <div>
               <label class="block text-[#303539] text-sm font-bold mb-2"
-                >Project Name <span class="text-red-500">*</span></label
-              >
-              <input
-                id="projectName"
-                v-model="formData.projectName"
-                type="text"
-                required
-                @input="validateField('projectName')"
-                class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
-                :class="{ 'border-red-500': validationErrors.projectName }"
-              />
+                >Project Name <span class="text-red-500">*</span>
+                <input
+                  id="projectName"
+                  autocomplete="projectName"
+                  v-model="formData.projectName"
+                  type="text"
+                  required
+                  @input="validateField('projectName')"
+                  class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
+                  :class="{ 'border-red-500': validationErrors.projectName }"
+                />
+              </label>
               <p
                 v-if="validationErrors.projectName"
                 class="text-red-500 text-sm mt-1"
@@ -200,6 +206,7 @@
               </label>
               <textarea
                 id="comments"
+                autocomplete="comments"
                 v-model="formData.comments"
                 rows="4"
                 class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] resize-none"
