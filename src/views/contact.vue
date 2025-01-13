@@ -62,6 +62,7 @@
                 >Name <span class="text-red-500">*</span></label
               >
               <input
+                id="name"
                 v-model="formData.name"
                 type="text"
                 required
@@ -79,6 +80,7 @@
                 >Email <span class="text-red-500">*</span></label
               >
               <input
+                id="email"
                 v-model="formData.email"
                 type="email"
                 required
@@ -99,6 +101,7 @@
                 >Phone Number <span class="text-red-500">*</span></label
               >
               <input
+                id="phone"
                 v-model="formData.phone"
                 type="tel"
                 required
@@ -119,6 +122,7 @@
                 Industry
               </label>
               <select
+                id="industry"
                 v-model="formData.industry"
                 @change="validateField('industry')"
                 class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
@@ -146,6 +150,7 @@
                 SubCategory
               </label>
               <select
+                id="category"
                 v-model="formData.category"
                 @change="validateField('category')"
                 class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539]"
@@ -173,6 +178,7 @@
                 >Project Name <span class="text-red-500">*</span></label
               >
               <input
+                id="projectName"
                 v-model="formData.projectName"
                 type="text"
                 required
@@ -193,6 +199,7 @@
                 Tell us more about your project
               </label>
               <textarea
+                id="comments"
                 v-model="formData.comments"
                 rows="4"
                 class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] resize-none"
