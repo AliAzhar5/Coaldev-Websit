@@ -10,10 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
-// Add Font Awesome icons to the library
 library.add(fas, fab);
-
-// Lazy load route components
 const routes = [
   { path: "/", redirect: "/home" },
   { path: "/home", component: () => import("./views/Home.vue") },
@@ -41,16 +38,16 @@ const router = createRouter({
 });
 
 const app = createApp(App);
-app.use(
-  VueGtag,
-  {
-    config: { id: "G-J21S0WHF57" },
-    appName: "CoalDev Website",
-    debug: true,
-    pageTrackerScreenviewEnabled: true,
-  },
-  router
-);
+// app.use(
+//   VueGtag,
+//   {
+//     config: { id: "G-J21S0WHF57" },
+//     appName: "CoalDev Website",
+//     debug: true,
+//     pageTrackerScreenviewEnabled: true,
+//   },
+//   router
+// );
 
 app.component("Header", Header);
 app.component("ChatButton", ChatButton);
