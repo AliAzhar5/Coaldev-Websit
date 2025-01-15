@@ -336,6 +336,7 @@
           >
             <button
               class="w-full sm:w-auto bg-[#303539] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg hover:bg-[#448CA1] transition-colors font-normal"
+              @click="handleSendClick"
             >
               Send
             </button>
@@ -347,7 +348,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { validateContactForm } from "@/utils/formValidation";
 import { store } from "@/components/Store";
 
@@ -460,6 +461,19 @@ const handleSubmit = async () => {
   } catch (error) {
     console.error("Error submitting form:", error);
     alert("There was an error submitting your form. Please try again.");
+  }
+};
+
+const handleSendClick = () => {
+  if (window.gtag) {
+    console.log("Google Analytics is initialized.");
+    window.gtag("event", "contact_us_click", {
+      event_category: "Navigation",
+      event_label: "Contact Us Button",
+      value: 1,
+    });
+  } else {
+    console.warn("Google Analytics is not initialized.");
   }
 };
 </script>
