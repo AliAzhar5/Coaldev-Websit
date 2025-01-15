@@ -100,7 +100,14 @@ const trackIndustryView = (industryName) => {
     window.gtag("event", "view_industry", {
       event_category: "Industry",
       event_label: industryName,
+      // ... additional parameters can be added here if needed
     });
   }
+  // New event to track popular industries
+  window.gtag("event", "popular_industry", {
+    event_category: "Industry",
+    event_label: industryName,
+    // ... additional parameters can be added here if needed
+  });
 };
 </script>
