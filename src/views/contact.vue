@@ -467,9 +467,9 @@ const handleSubmit = async () => {
 const handleSendClick = () => {
   if (window.gtag) {
     console.log("Google Analytics is initialized.");
-    window.gtag("event", "contact_us_click", {
-      event_category: "Navigation",
-      event_label: "Contact Us Button",
+    window.gtag("event", "send_click", {
+      event_category: "Submission",
+      event_label: "Send Button",
       value: 1,
     });
   } else {
