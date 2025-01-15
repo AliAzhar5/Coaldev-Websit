@@ -124,13 +124,14 @@
             </div>
 
             <div>
-              <label class="block text-[#303539] text-sm font-bold mb-2"
-                >Industry <span class="text-red-500">*</span>
+              <label class="block text-[#303539] text-sm font-bold mb-2">
+                Industry <span class="text-red-500">*</span>
                 <select
                   id="industry"
                   autocomplete="industry"
+                  required
                   v-model="formData.industry"
-                  @change="validateField('industry')"
+                  @change="handleIndustryChange"
                   class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
                   :class="{ 'border-red-500': validationErrors.industry }"
                 >
@@ -158,6 +159,7 @@
                 <select
                   id="category"
                   autocomplete="category"
+                  required
                   v-model="formData.category"
                   @change="validateField('category')"
                   class="w-full px-4 py-2 border-2 rounded-lg focus:outline-none focus:border-[#303539] font-normal"
@@ -399,8 +401,6 @@ const technologies = [
 
 // Add new ref for validation errors
 const validationErrors = ref({});
-
-// Add computed property for subcategories
 const selectedIndustrySubcategories = computed(() => {
   const selectedIndustry = store.industries.find(
     (industry) => industry.name === formData.value.industry
@@ -408,13 +408,11 @@ const selectedIndustrySubcategories = computed(() => {
   return selectedIndustry ? selectedIndustry.subcategories : [];
 });
 
-// When industry changes, reset the category
 const handleIndustryChange = () => {
   formData.value.category = "";
   validateField("industry");
 };
 
-// Add validation on input change
 const validateField = (field) => {
   const dataToValidate = {
     ...formData.value,
@@ -445,7 +443,6 @@ const handleSubmit = async () => {
     }
 
     console.log("Form submitted:", submissionData);
-
     formData.value = {
       name: "",
       email: "",

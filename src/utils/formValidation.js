@@ -1,3 +1,5 @@
+import { store } from "@/components/Store";
+
 export const validateContactForm = (formData) => {
   const errors = {};
 
