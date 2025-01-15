@@ -59,6 +59,7 @@
           v-for="industry in industries"
           :key="industry.name"
           class="bg-gray-50 p-6 transition-all duration-500 ease-in-out hover:bg-[#303539] group border-l-4 border-[#303539] relative overflow-hidden cursor-pointer text-left"
+          @click="trackIndustryView(industry.name)"
         >
           <div
             class="absolute inset-0 bg-[#303539] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
@@ -91,4 +92,15 @@
 <script setup>
 import { store } from "../components/Store.js";
 const industries = store.industries;
+
+// New method to track industry views
+const trackIndustryView = (industryName) => {
+  if (window.gtag) {
+    // Check if gtag is available
+    window.gtag("event", "view_industry", {
+      event_category: "Industry",
+      event_label: industryName,
+    });
+  }
+};
 </script>
