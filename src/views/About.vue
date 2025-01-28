@@ -104,21 +104,20 @@
             <p
               class="text-base sm:text-lg lg:text-xl text-[#303539] border-l-4 border-[#448CA1] mb-4 ml-4 sm:ml-12 md:ml-24 mt-8 sm:mt-10 md:mt-16 pl-4"
             >
-              CoalDev is a customer-centric information technology company and
-              offers comprehensive, cost effective and efficient software
-              solutions. We specializes in the domain of data science, custom
-              software development, cloud and blockchain . At CoalDev, we
-              believe in working closely with clients and adapting to
-              innovations.
+              At CoalDev, we are a team of passionate developers, designers, and
+              AI enthusiasts dedicated to delivering top-notch software
+              solutions. With years of experience in Django backend development,
+              Vue.js frontend frameworks, and generative AI technologies, we
+              help businesses unlock their full potential.
             </p>
           </div>
           <div class="w-full md:w-1/2 pl-4 sm:pl-12 md:pl-32 mt-10 md:mt-20">
             <p
               class="text-base sm:text-lg md:text-xl text-[#303539] font-bold ml-0 sm:ml-10 max-w-[400px] leading-normal md:mt-16"
             >
-              Our mission is to turn our extensive
-              <span class="text-[#448CA1]">business expertise</span> and
-              exceptional talents to impactful solutions for your business.
+              Our mission is to bridge the gap between technology and
+              creativity, providing tailor-made solutions that drive growth,
+              efficiency, and innovation.
             </p>
           </div>
         </div>

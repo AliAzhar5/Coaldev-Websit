@@ -7,17 +7,15 @@
         <h1
           class="text-3xl sm:text-4xl lg:text-6xl font-semibold italic text-[#303539] mb-2 mx-4 lg:ml-16 md:mt-12"
         >
-          WE ARE <span class="text-[#448CA1]">CODING</span>
-          <br />
-          YOUR WAY TO SUCCESS
+          Empowering Businesses with Cutting-Edge
+          <span class="text-[#448CA1] italic">AI Solutions</span>
         </h1>
         <div class="w-full lg:3/4 text-justify">
           <p
             class="text-base sm:text-lg text-[#303539] mx-4 lg:ml-16 mt-6 lg:mt-10"
           >
-            CoalDev is a software company specializes in developing, designing,
-            and maintaining applications, systems, or platforms to address
-            specific user needs and business challenges.
+            Harness the power of generative AI, seamless web development, and
+            scalable backend systems to transform your ideas into reality.
           </p>
         </div>
         <div class="flex gap-2 sm:gap-4 mx-4 lg:ml-16 mt-6 lg:mt-16">
@@ -67,12 +65,12 @@
               <p
                 class="text-base sm:text-lg text-white mb-4 mx-4 lg:ml-16 lg:mt-10 text-justify"
               >
-                Whether you need a simple application or a complex web-based
-                system, CoalDev can help you achieve your goals. We have a team
-                of experienced developers who specialize in building tailored
-                solutions to meet the specific needs of clients. With a focus on
-                quality and customer satisfaction, CoalDev is the perfect choice
-                for your next web development project.
+                Welcome to CoalDev, where innovation meets technology. We
+                specialize in building intelligent, user-friendly web
+                applications powered by Django, Vue.js, and state-of-the-art
+                generative AI. Whether you're looking to automate processes,
+                enhance user experiences, or create something entirely new,
+                we’ve got you covered.
               </p>
             </div>
           </div>
@@ -87,8 +85,8 @@
         >
           WHY MANY COMPANIES
           <br />
-          <span class="text-[#008C96] italic">CHOOSE</span> COAL<span
-            class="text-[#008C96] italic"
+          <span class="text-[#448CA1] italic">CHOOSE</span> COAL<span
+            class="text-[#448CA1] italic"
             >DEV.</span
           >
         </h2>
